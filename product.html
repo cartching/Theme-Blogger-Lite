@@ -5,14 +5,12 @@
 
 <!-- #EXTENDS file="theme-simple.html" -->
 
-
-<!-- #BLOCK for="pagetitle_area" -->
-<!-- #ENDBLOCK -->
-
-
-
-
+<!-- #BLOCK for="page_title" --><!-- #ENDBLOCK -->
+<!-- #BLOCK for="page_description" --><meta property="og:description" content="{{product.excerpt | html_encode}}" /><!-- #ENDBLOCK -->
+<!-- #BLOCK for="page_image" --><!-- #IF {{product.image}} --><meta property="og:image" content="{{store.url}}{{product.image}}-200x320.jpg" /><!-- #ENDIF --><!-- #ENDBLOCK -->
+<!-- #BLOCK for="page_type" --><meta property="og:type" content="product" /><!-- #ENDBLOCK -->
 <!-- #BLOCK for="head_content" -->
+<link rel="stylesheet" type="text/css" href="/themes/rogue-light/files/jquery.lightbox-0.5.css" media="screen" />
 <script type="text/javascript" language="javascript">
 
 	// Change Stock Value to Text Description
@@ -22,7 +20,7 @@
 
 </script>
 <!-- #ENDBLOCK -->
-
+<!-- #BLOCK for="pagetitle_area" --> <!-- #ENDBLOCK -->
 
 
 

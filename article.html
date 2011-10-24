@@ -5,16 +5,12 @@
 
 <!-- #EXTENDS file="theme.html" -->
 
-
-<!-- #BLOCK for="head_content" -->
-<meta property="og:site_name" content="{{store | html_encode}}" />
-<meta property="og:title" content="{{page.title | html_encode}}" />
-<!-- #ENDBLOCK -->
-
-
-<!-- #BLOCK for="pagetitle_area" -->
-<!-- #ENDBLOCK -->
-
+<!-- #BLOCK for="page_title" --><!-- #ENDBLOCK -->
+<!-- #BLOCK for="head_content" --><link rel="alternate" type="application/rss+xml" title="{{store | html_encode}}'s Blog" href="{{store.url}}/blog.rss" /><!-- #ENDBLOCK -->
+<!-- #BLOCK for="page_description" --><meta property="og:description" content="{{article.excerpt | html_encode}}" /><!-- #ENDBLOCK -->
+<!-- #BLOCK for="page_type" --><meta property="og:type" content="article" /><!-- #ENDBLOCK -->
+<!-- #BLOCK for="page_image" --><!-- #IF {{article.image}} --><meta property="og:image" content="{{store.url}}{{article.image}}-200x320.jpg" /><!-- #ENDIF --><!-- #ENDBLOCK -->
+<!-- #BLOCK for="pagetitle_area" --> <!-- #ENDBLOCK -->
 
 
 <!-- #BLOCK for="aside_area" -->
