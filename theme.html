@@ -13,8 +13,7 @@
 <!-- <meta name="viewport" content="width=device-width; initial-scale=1" /> -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="title" content="{{store | html_encode}}" />
-<!-- #IF {{page.keywords}} --><meta name="keywords" content="{{page.keywords | html_encode}}" /><!-- #ENDIF -->
-
+<!-- #BLOCK name="page_keywords" --><!-- #IF {{page.keywords}} --><meta name="keywords" content="{{page.keywords | html_encode}}" /><!-- #ENDIF --><!-- #ENDBLOCK --> 
 <!-- #BLOCK name="page_description" -->
 <!-- #IF {{page.description}} -->
 <!-- #var {{ pagedescription = page.description | strip_html | html_encode }} -->
@@ -22,7 +21,6 @@
 <meta property="og:description" content="{{pagedescription}}" />
 <!-- #ENDIF -->
 <!-- #ENDBLOCK -->
-
 <meta property="og:site_name" content="{{store | html_encode}}" />
 <meta property="og:url" content="{{page.url}}" />
 <meta property="og:title" content="{{page.title | html_encode}}" />

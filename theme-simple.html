@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-
 <!--/
 	Cartching Template / Blogger Lite v1.0
 	http://cartching.com | Copyright (c) Cartching, 2011
@@ -14,8 +13,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="title" content="{{store | html_encode}}" />
-<!-- #IF {{page.keywords}} --><meta name="keywords" content="{{page.keywords | html_encode}}" /><!-- #ENDIF -->
-
+<!-- #BLOCK name="page_keywords" --><!-- #IF {{page.keywords}} --><meta name="keywords" content="{{page.keywords | html_encode}}" /><!-- #ENDIF --><!-- #ENDBLOCK --> 
 <!-- #BLOCK name="page_description" -->
 <!-- #IF {{page.description}} -->
 <!-- #var {{ pagedescription = page.description | strip_html | html_encode }} -->

@@ -7,6 +7,13 @@
 
 <!-- #BLOCK for="page_title" --><!-- #ENDBLOCK -->
 <!-- #BLOCK for="head_content" --><link rel="alternate" type="application/rss+xml" title="{{store | html_encode}}'s Blog" href="{{store.url}}/blog.rss" /><!-- #ENDBLOCK -->
+<!-- #BLOCK for="page_keywords" -->
+<!-- #IF {{article.tags}} -->
+    <meta name="keywords" content="<!-- #FOREACH {{tag in article.tags}} -->{{tag}}, <!-- #NEXT -->" />
+<!-- #ELSE -->
+    <!-- #IF {{page.keywords}} --><meta name="keywords" content="{{page.keywords | html_encode}}" /><!-- #ENDIF -->
+<!-- #ENDIF -->
+<!-- #ENDBLOCK -->
 <!-- #BLOCK for="page_description" -->
 <!-- #IF {{article.excerpt}} -->
     <!-- #var {{ pagedescription = article.excerpt | strip_html | html_encode }} -->
