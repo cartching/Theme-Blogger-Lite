@@ -457,10 +457,12 @@ div.post p.tags a:after, div.article p.tags a:after { content:", "; }
 /* Constrain User Content */
 div.post p.entry-excerpt img,
 div.entry-content img
-{ max-width:500px !important; }
+{ max-width:500px !important; height:auto; }
 
 div.post p.entry-excerpt iframe,
-div.entry-content iframe
+div.entry-content iframe,
+div.post p.entry-excerpt object,
+div.entry-content object
 { width:100%; } /*  max-width:500px !important; width:100%; */
 
 div.post div.entry-content .image, div.article div.entry-content .image { max-width:100%; float:none; margin:10px 0; text-align:center; } /* width:auto; height:auto; */
