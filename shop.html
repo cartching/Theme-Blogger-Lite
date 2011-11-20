@@ -123,29 +123,28 @@
 
 
 <!-- #BLOCK for="script_content" -->
-
 <!-- #IF {{snippets.shop-page-callout}} -->
-    <script type="text/javascript" language="javascript" src="/themes/blogger-lite/files/jquery.carouFredSel-4.3.3-packed.js"></script>
-    <script type="text/javascript" language="javascript">
-        $(function() {
-            $('#shop-page-carousel').carouFredSel({			
-                items:1,
-                auto: true,
-                // direction   : "up",
-                pagination  : "#pagination",
-    
-                prev: {
-                    button  : "#prev",
-                    key     : "left"	
-                },
-                next: {
-                    button  : "#next",
-                    key     : "right"
-                }
-    
-            });
+<script type="text/javascript" language="javascript" src="http://static.store-cdn.com/themes/blogger-lite/files/jquery.carouFredSel-4.3.3-packed.js"></script>
+<script type="text/javascript" language="javascript">
+    $(function() {
+        $('#shop-page-carousel').carouFredSel({			
+            items:1,
+            auto: {
+                  duration: 1000, // the duration of the animation (1 sec)
+                  pauseDuration: 2000, // the time inbetween animations (10 sec)
+                  pauseOnHover: true
+            },
+            pagination  : "#pagination",
+            prev: {
+                button  : "#prev",
+                key     : "left"	
+            },
+            next: {
+                button  : "#next",
+                key     : "right"
+            }
         });
-    </script>
+    });
+</script>
 <!-- #ENDIF -->
-
 <!-- #ENDBLOCK -->
