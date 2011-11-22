@@ -66,8 +66,8 @@
         <div class="hproduct product-listitem {{product.slug}}">
         <div class="inner">
 
-            <div class="product-photo"><a title="{{product.name | html_encode}} / {{product.price | money}}" href="{{product.url}}" class="url" rel="product"><img src="{{product.image}}-200x230-90.jpg" alt="{{product.excerpt | html_encode}}" class="photo" /></a></div>
-
+            <div class="product-photo"><a title="{{product.name | html_encode}} / {{product.price | money}}" href="{{product.url}}" class="url" rel="product"><img src="{{product.image}}?w=200&h=230&crop=true" alt="{{product.excerpt | html_encode}}" class="photo" /></a></div>
+            
             <p class="price">
                 <!-- #IF {{product.onsale}} -->
                 <del><span class="currency">{{store.currency_sign}}</span><span class="dollars">{{product.fullprice | money_dollars}}</span><!-- #IF {{product.fullprice | money_cents}} --><span class="cents">.{{product.fullprice | money_cents}}</span><!-- #ENDIF --></del>
@@ -95,7 +95,7 @@
         <div class="inner">
 
             <div class="product-photo">
-                <a title="{{product.name | html_encode}} / {{product.price | money}}" href="{{product.url}}" class="url" rel="product"><img src="{{product.image}}-178x190-90.jpg" alt="{{product.excerpt | html_encode}}" class="photo" /></a>
+                <a title="{{product.name | html_encode}} / {{product.price | money}}" href="{{product.url}}" class="url" rel="product"><img src="{{product.image}}?w=178&h=190&crop=true" alt="{{product.excerpt | html_encode}}" class="photo" /></a>
             </div>
 
             <p class="price">
@@ -124,7 +124,7 @@
 
 <!-- #BLOCK for="script_content" -->
 <!-- #IF {{snippets.shop-page-callout}} -->
-<script type="text/javascript" language="javascript" src="http://static.store-cdn.com/themes/blogger-lite/files/jquery.carouFredSel-4.3.3-packed.js"></script>
+<script type="text/javascript" language="javascript" src="{{theme.files}}/jquery.carouFredSel-4.3.3-packed.js"></script>
 <script type="text/javascript" language="javascript">
     $(function() {
         $('#shop-page-carousel').carouFredSel({			

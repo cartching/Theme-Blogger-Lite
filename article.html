@@ -28,7 +28,7 @@
 <!-- #ENDIF -->
 <!-- #ENDBLOCK -->
 <!-- #BLOCK for="page_type" --><meta property="og:type" content="article" /><!-- #ENDBLOCK -->
-<!-- #BLOCK for="page_image" --><!-- #IF {{article.image}} --><meta property="og:image" content="{{store.url}}{{article.image}}-200x320.jpg" /><!-- #ENDIF --><!-- #ENDBLOCK -->
+<!-- #BLOCK for="page_image" --><!-- #IF {{article.image}} --><meta property="og:image" content="{{article.image}}?w=200&h=320&crop=false" /><!-- #ENDIF --><!-- #ENDBLOCK -->
 <!-- #BLOCK for="pagetitle_area" --> <!-- #ENDBLOCK -->
 
 
@@ -59,7 +59,7 @@
 
 
 			<!-- #IF {{article.image}} -->
-			<div class="post-image"><img src="{{article.image}}-500x800.jpg" alt="{{article.title | html_encode}}" /></div>
+			<div class="post-image"><img src="{{article.image}}?w=500&h=800&crop=false" alt="{{article.title | html_encode}}" /></div>
 			<!-- #ENDIF -->
 
 			<div class="preview">
