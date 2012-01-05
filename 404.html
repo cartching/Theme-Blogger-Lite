@@ -1,0 +1,40 @@
+<!--/
+	Cartching Template / Blogger Lite v1.0
+	http://cartching.com | Copyright (c) Cartching, 2011
+/-->
+
+<!-- #EXTENDS file="theme-simple.html" -->
+
+<!-- #BLOCK for="page_title" --><title>{{store | html_encode}}</title><!-- #ENDBLOCK -->
+
+<!-- #BLOCK for="body_tag" -->    
+<body id="lostpage" class="lostpage theme-simple">
+<!-- #ENDBLOCK -->
+
+
+<!-- #BLOCK for="pagetitle_area" -->
+
+<div class="pagetitle_area">    
+	    <div id="pagetitle">
+        	<div class="container">
+
+				<h1>Doh!</h1>
+				<h3>It appears we can't find that Page.</h3>
+
+            </div>
+		</div>
+	</div>
+
+<!-- #ENDBLOCK -->
+
+
+<!-- #BLOCK for="content_area" -->
+		
+		<p>The page at ( <strong>{{path}}</strong> ) could not be found.</p>
+		<ul>
+          <li><a href="#" onclick="history.go(-1);">&laquo; Go Back</a></li>
+          <li><a href="/">Home Page</a></li>
+        </ul>
+<p class="hint">&nbsp;</p>
+
+<!-- #ENDBLOCK -->
